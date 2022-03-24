@@ -1,5 +1,4 @@
 import streamlit as st
-import gsheetsdb
 from gsheetsdb import connect
 
 # Create a connection object.
@@ -15,6 +14,15 @@ def run_query(query):
 sheet1_url = st.secrets["gsheets"]["source_connectors"]
 rows = run_query(f'SELECT * FROM "{sheet1_url}"')
 
+st.subheader('Source Connectors:')
 # Print results.
 for row in rows:
     st.write(f"{row.Description} has a :{row.Hevo}:")
+
+sheet2_url = st.secrets["gsheets"]["miscellaneous"]
+rows = run_query(f'SELECT * FROM "{sheet2_url}"')
+
+st.subheader('Miscellaneous:')
+# Print results.
+for row in rows:
+    st.write(f"{row.Description}")
