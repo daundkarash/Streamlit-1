@@ -1,22 +1,20 @@
 import streamlit as st
+import gsheetsdb
+from gsheetsdb import connect
 
-st.title("hello Streamlit")
+# Create a connection object.
+conn = connect()
 
-st.header("header")
+# Perform SQL query on the Google Sheet.
+# Uses st.cache to only rerun when the query changes or after 10 min.
+@st.cache(ttl=600)
+def run_query(query):
+    rows = conn.execute(query, headers=1)
+    return rows
 
-st.subheader("subheader")
+sheet_url = st.secrets["public_gsheets_url"]
+rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-st.text("textt ttexttttex ttttexttttexttttext tttexttttexttttext  tttexttttexttttexttttexttttexttttexttttexttttexttttexttttexttttexttttexttttexttt")
-
-st.markdown("""
-# h1 tag
-## h2 tag
-:moon: <br>
-:sunglasses:
- """, True)
-
-st.latex(r'''
-a +ar+ a r^2''')
-
-st.write("Yo", "123", "# new")
-
+# Print results.
+for row in rows:
+    st.write(f"{row.Description} has a :{row.Hevo}:")
