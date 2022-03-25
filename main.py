@@ -76,9 +76,30 @@ st.markdown("""
 </nav>
 """, unsafe_allow_html=True)
 
-data = pd.read_csv("data//ETL-ELT Tool Accelerator_Finalized.xlsx - Detail Score.csv")
+# data = pd.read_csv("data//ETL-ELT Tool Accelerator_Finalized.xlsx - Detail Score.csv")
 
-first = data[["Platform Features"]]
+# first = data[["Platform Features"]]
+# print(first)
+
+# st.write(first)
+
+data = pd.read_csv("data//Break-up of ETL-ELT Tool Accelerator.xlsx - Source Connectors.csv")
+
+first = data["Platform Features"].dropna();
+discard = ["description","Description"]
+  
+# drop rows that contain the partial string "description"
+first = first[~first.str.contains('|'.join(discard))]
 print(first)
 
-st.write(first)
+st.write('Select feature:')
+opts = list(first)
+print(opts)
+
+known_variables = {}
+for i, todo_text in enumerate(opts):
+        var = st.checkbox(label=f'{todo_text}', key=i)
+        print(var)
+        known_variables.update({todo_text:var})
+
+print(known_variables)
