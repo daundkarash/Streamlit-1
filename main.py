@@ -27,25 +27,25 @@ st.markdown("""
           <i class="fas fa-chart-area fa-fw me-3"></i><span>Source Connectors</span>
         </a>
         <a href="#" class="list-group-item list-group-item-action bg-dark py-2 ripple"
-          ><i class="fas fa-lock fa-fw me-3"></i><span>Category -2</span></a>
+          ><i class="fas fa-lock fa-fw me-3"></i><span>Transformations at Source</span></a>
         <a href="#" class="list-group-item list-group-item-action bg-dark py-2 ripple"
-          ><i class="fas fa-chart-line fa-fw me-3"></i><span>Category -3</span></a>
+          ><i class="fas fa-chart-line fa-fw me-3"></i><span>Real Time Data Streaming</span></a>
         <a href="#" class="list-group-item list-group-item-action bg-dark py-2 ripple">
-          <i class="fas fa-chart-pie fa-fw me-3"></i><span>Category -4</span>
+          <i class="fas fa-chart-pie fa-fw me-3"></i><span>Transformation support</span>
         </a>
         <a href="#" class="list-group-item list-group-item-action bg-dark py-2 ripple"
-          ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Category -5</span></a>
+          ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Datawarehouse Destination</span></a>
         <a href="#" class="list-group-item list-group-item-action bg-dark py-2 ripple"
-          ><i class="fas fa-globe fa-fw me-3"></i><span>Category -6</span></a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark py-2 ripple"><i class="fas fa-building fa-fw me-3"></i><span>Category -7</span></a>
+          ><i class="fas fa-globe fa-fw me-3"></i><span>Advantages/Limitation</span></a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark py-2 ripple"><i class="fas fa-building fa-fw me-3"></i><span>Cost</span></a>
         <a href="#" class="list-group-item list-group-item-action bg-dark py-2 ripple"
-          ><i class="fas fa-calendar fa-fw me-3"></i><span>Category -8</span></a
+          ><i class="fas fa-calendar fa-fw me-3"></i><span>Support</span></a
         >
         <a href="#" class="list-group-item list-group-item-action bg-dark py-2 ripple"
-          ><i class="fas fa-users fa-fw me-3"></i><span>Category -9</span></a
+          ><i class="fas fa-users fa-fw me-3"></i><span>Security</span></a
         >
         <a href="#" class="list-group-item list-group-item-action bg-dark py-2 ripple"
-          ><i class="fas fa-money-bill fa-fw me-3"></i><span>Category -10</span></a
+          ><i class="fas fa-money-bill fa-fw me-3"></i><span>Miscellaneous</span></a
         >
       </div>
     </div>
